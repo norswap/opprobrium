@@ -1,0 +1,27 @@
+{
+  "name": "opprobrium",
+  "author": "norswap",
+  "license": "BSD-3-Clause-Clear",
+  "version": "1.0.0",
+  "description": "Smart Contract starting template",
+  "files": [
+    "*.sol"
+  ],
+  "devDependencies": {
+    "prettier": "^2.4.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "solhint": "^3.3.6",
+    "solhint-plugin-prettier": "^0.0.5"
+  },
+  "scripts": {
+    "lint": "npm run prettier && npm run solhint",
+    "lint:check": "solhint --config ./.solhint.json \"src/**/*.sol\"",
+    "solhint": "npm run lint:check --fix",
+    "prettier:check": "prettier --check \"src/**/*.sol\"",
+    "prettier": "npm run prettier:check --write"
+  },
+  "comment___": [
+    "With the prettier plugin, solhint will re-run the prettier check, but can't actually change the files to match.",
+    "Solhint does however report more details about prettier violations than prettier itself."
+  ]
+}
