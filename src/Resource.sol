@@ -10,13 +10,13 @@ abstract contract Resource is ERC20Burnable {
     BuildingType public buildingType;
 
     constructor(
-        Buildings buildings_,
-        BuildingType buildingType_,
+        Buildings _buildings,
+        BuildingType _buildingType,
         string memory name,
         string memory symbol
     ) ERC20(name, symbol) {
-        buildings = buildings_;
-        buildingType = buildingType_;
+        buildings = _buildings;
+        buildingType = _buildingType;
     }
 
     // Maps players to the timestamp where their balance was last updated.
