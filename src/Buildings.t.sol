@@ -7,24 +7,24 @@ import "forge-std/Test.sol";
 
 contract BuildingsTests is Test {
     Buildings private buildings;
-    Deuthereum private deuthereum;
+    Deuterium private deuterium;
     Gas private gas;
     Mineral private mineral;
 
     address private constant player = 0x00000000000000000000000000000000DeaDBeef;
     BuildingType private constant MINE = BuildingType.MINERAL_MINE;
     BuildingType private constant EXTRACTOR = BuildingType.GAS_EXTRACTOR;
-    BuildingType private constant SYNTHESIZER = BuildingType.DEUTHEREUM_SYNTHESIZER;
+    BuildingType private constant SYNTHESIZER = BuildingType.DEUTERIUM_SYNTHESIZER;
 
     function setUp() public {
         buildings = new Buildings();
-        deuthereum = new Deuthereum(buildings);
+        deuterium = new Deuterium(buildings);
         gas = new Gas(buildings);
         mineral = new Mineral(buildings);
     }
 
     modifier init() {
-        buildings.initialize(deuthereum, gas, mineral);
+        buildings.initialize(deuterium, gas, mineral);
         _;
     }
 

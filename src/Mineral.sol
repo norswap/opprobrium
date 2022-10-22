@@ -6,5 +6,5 @@ import "./Resource.sol";
 import {BuildingType} from "./Buildings.sol";
 
 contract Mineral is Resource {
-    constructor(Buildings buildings) Resource(buildings, BuildingType.MINERAL_MINE, "Mineral", "ROCK") {}
+    constructor(Buildings buildings) Resource(buildings, BuildingType.MINERAL_MINE, "Mineral", "MNRL") {}
 }
