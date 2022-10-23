@@ -2,11 +2,6 @@
 # (-include to ignore error if it does not exist)
 -include .env
 
-# Update dependencies
-setup			:; make update-libs ; make install-deps
-update-libs		:; git submodule update --init --recursive
-install-deps	:; pnpm install --frozen-lockfile
-
 # Build & test & deploy
 build         	:; forge build
 xclean        	:; forge clean

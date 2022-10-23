@@ -1,20 +1,24 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@openzeppelin/contracts': ^4.7.3
-  prettier: ^2.7.1
-  prettier-plugin-solidity: ^1.0.0-beta.24
-  solhint: ^3.3.7
-  solhint-plugin-prettier: ^0.0.5
+importers:
 
-dependencies:
-  '@openzeppelin/contracts': 4.7.3
+  .:
+    specifiers: {}
 
-devDependencies:
-  prettier: 2.7.1
-  prettier-plugin-solidity: 1.0.0-beta.24_prettier@2.7.1
-  solhint: 3.3.7
-  solhint-plugin-prettier: 0.0.5_hwxylllfazz3b32qkrkocph6du
+  packages/contracts:
+    specifiers:
+      '@openzeppelin/contracts': ^4.7.3
+      prettier: ^2.7.1
+      prettier-plugin-solidity: ^1.0.0-beta.24
+      solhint: ^3.3.7
+      solhint-plugin-prettier: ^0.0.5
+    dependencies:
+      '@openzeppelin/contracts': 4.7.3
+    devDependencies:
+      prettier: 2.7.1
+      prettier-plugin-solidity: 1.0.0-beta.24_prettier@2.7.1
+      solhint: 3.3.7
+      solhint-plugin-prettier: 0.0.5_hwxylllfazz3b32qkrkocph6du
 
 packages:
 

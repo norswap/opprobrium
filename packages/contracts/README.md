@@ -1,4 +1,4 @@
-# Oppobrium Prime
+# Opprobrium Contracts
 
 ## Installation
 
@@ -10,7 +10,7 @@ Tooling required:
 
 ## Commands
 
-- `make setup` - initialize libraries and npm packages
+- `cd ../.. && make setup` - initialize libraries and npm packages
 - `make build` - build your project
 - `make xclean` - remove compiled files
 - `make lint` - lint files
