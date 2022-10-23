@@ -1,10 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@openzeppelin/contracts': ^4.7.3
   prettier: ^2.7.1
   prettier-plugin-solidity: ^1.0.0-beta.24
   solhint: ^3.3.7
   solhint-plugin-prettier: ^0.0.5
+
+dependencies:
+  '@openzeppelin/contracts': 4.7.3
 
 devDependencies:
   prettier: 2.7.1
@@ -34,6 +38,10 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
+
+  /@openzeppelin/contracts/4.7.3:
+    resolution: {integrity: sha512-dGRS0agJzu8ybo44pCIf3xBaPQN/65AIXNgK8+4gzKd5kbvlqyxryUYVLJv7fK98Seyd2hDZzVEHSWAh0Bt1Yw==}
+    dev: false
 
   /@solidity-parser/parser/0.14.3:
     resolution: {integrity: sha512-29g2SZ29HtsqA58pLCtopI1P/cPy5/UAzlcAXO6T/CNJimG6yA8kx4NaseMyJULiC+TEs02Y9/yeHzClqoA0hw==}

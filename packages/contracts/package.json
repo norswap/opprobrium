@@ -22,5 +22,8 @@
   "comment___": [
     "With the prettier plugin, solhint will re-run the prettier check, but can't actually change the files to match.",
     "Solhint does however report more details about prettier violations than prettier itself."
-  ]
+  ],
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3"
+  }
 }

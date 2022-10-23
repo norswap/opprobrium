@@ -6,7 +6,7 @@ import "./Mineral.sol";
 import "./Gas.sol";
 import "./Deuterium.sol";
 
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/access/Ownable.sol";
 
 enum BuildingType {
     MINERAL_MINE,
