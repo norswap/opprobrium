@@ -12,3 +12,6 @@ packages/contracts/cache/
 
 # IntelliJ config
 .idea/
+
+# React outputs
+packages/react/www/js/app.js
