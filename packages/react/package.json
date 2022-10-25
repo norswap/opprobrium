@@ -1,11 +1,14 @@
 {
   "name": "@opprobrium/react",
-  "author": "norswap"
-  "license": "BSD-3-Clause-Clear",,
+  "author": "norswap",
+  "license": "BSD-3-Clause-Clear",
   "version": "1.0.0",
-  "main": "index.js",
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^0.7.3",
+    "esbuild": "^0.15.12",
+    "ethers": "^5.7.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "wagmi": "^0.7.5"
   }
 }

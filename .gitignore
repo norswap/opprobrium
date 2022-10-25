@@ -14,4 +14,5 @@ packages/contracts/cache/
 .idea/
 
 # React outputs
-packages/react/www/js/app.js
+packages/react/www/app.js
+packages/react/www/app.css
