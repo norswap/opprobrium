@@ -2,6 +2,7 @@
 
 pragma solidity ^0.8.0;
 
+import "./BuildingsData.sol";
 import "./Mineral.sol";
 import "./Gas.sol";
 import "./Deuterium.sol";
@@ -22,7 +23,7 @@ struct BuildingLevelInfo {
     uint32 constructionTime;
 }
 
-contract Buildings is Ownable {
+contract Buildings is BuildingsData, Ownable {
     // Max level that buildings can be upgraded to.
     uint32 public constant MAX_LEVEL = 4;
 
@@ -36,9 +37,6 @@ contract Buildings is Ownable {
 
     // Maps (player, building type) to building level.
     mapping(address => mapping(BuildingType => uint32)) public levels;
-
-    // Maps (building type, level) to building level info.
-    mapping(BuildingType => mapping(uint32 => BuildingLevelInfo)) private levelInfo;
 
     function productionRate(address player, BuildingType btype) public view returns (uint32) {
         uint32 level = levels[player][btype];
@@ -73,121 +71,5 @@ contract Buildings is Ownable {
         gas = _gas;
         mineral = _mineral;
         initialized = true;
-    }
-
-    constructor() {
-        // Mineral Mine
-
-        levelInfo[BuildingType.MINERAL_MINE][0] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.MINERAL_MINE][1] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.MINERAL_MINE][2] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.MINERAL_MINE][3] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.MINERAL_MINE][4] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-
-        // Gas Extractor
-
-        levelInfo[BuildingType.GAS_EXTRACTOR][0] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.GAS_EXTRACTOR][1] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.GAS_EXTRACTOR][2] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.GAS_EXTRACTOR][3] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.GAS_EXTRACTOR][4] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-
-        // Deuterium Synthesizer
-
-        levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][0] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][1] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][2] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][3] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
-        levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][4] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
-            costDeuterium: 0,
-            productionRate: 0,
-            constructionTime: 0
-        });
     }
 }

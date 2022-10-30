@@ -1,0 +1,9 @@
+{
+  "name": "@opprobrium/data",
+  "author": "norswap",
+  "license": "BSD-3-Clause-Clear",
+  "version": "1.0.0",
+  "devDependencies": {
+    "ejs": "^3.1.8"
+  }
+}

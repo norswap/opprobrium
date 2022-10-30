@@ -1,0 +1,116 @@
+{
+    "mineral_mine": [
+        {
+            "level": 0,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 1,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 2,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 3,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 4,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        }
+    ],
+    "gas_extractor": [
+        {
+            "level": 0,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 1,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 2,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 3,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 4,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        }
+    ],
+    "deuterium_synthesizer": [
+        {
+            "level": 0,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 1,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 2,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 3,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        },{
+            "level": 4,
+            "costMineral": 0,
+            "costGas": 0,
+            "costDeuterium": 0,
+            "productionRate": 0,
+            "constructionTime": 0
+        }
+    ]
+}
