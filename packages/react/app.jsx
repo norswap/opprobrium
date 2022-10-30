@@ -1,6 +1,8 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom/client'
 
+import './www/style.css'
+
 const ALCHEMY_ID='_Kk7f1qWnBq1aRfgSMjfaDLTBl9ubL0a'
 
 // =============================================================================
@@ -12,6 +14,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import {
   getDefaultWallets,
   RainbowKitProvider,
+  darkTheme,
 } from '@rainbow-me/rainbowkit'
 
 import {
@@ -78,8 +81,10 @@ class Building extends React.Component {
 
 function AppBody() {
   return <div className="container-lg text-light">
+    <div className="rainbowkit">
+      <ConnectButton showBalance={false} />
+    </div>
     <h1 className="mx-5 my-3 display-1"><em>OPPROBRIUM</em> 💥✨</h1>
-    <ConnectButton />
     <Building name="Mineral Mine" url="assets/mineral-mine.png" />
     <Building name="Crystal Mine" url="assets/crystal-mine.png" />
     <Building name="Deuterium Synthesizer" url="assets/deuterium-synthesizer.png" />
@@ -87,11 +92,13 @@ function AppBody() {
 }
 
 function App() {
-  return <WagmiConfig client={wagmiClient}>
-    <RainbowKitProvider chains={chains}>
+  return <React.StrictMode>
+    <WagmiConfig client={wagmiClient}>
+    <RainbowKitProvider chains={chains} theme={darkTheme()}>
       <AppBody />
-    </RainbowKitProvider>
+  </RainbowKitProvider>
   </WagmiConfig>
+  </React.StrictMode>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

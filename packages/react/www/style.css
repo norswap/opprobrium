@@ -5,3 +5,8 @@ body {
 h1 {
     font-family: 'Rubik', sans-serif;
 }
+
+.rainbowkit {
+    margin-top: 25px;
+    float: right;
+}
