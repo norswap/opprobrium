@@ -37,10 +37,4 @@ abstract contract Resource is ERC20Burnable {
         require(msg.sender == address(buildings));
         _burn(player, amount);
     }
-
-    // Public mint function — only for testing.
-    function mint(address player, uint256 amount) external {
-        require(msg.sender == address(this));
-        _mint(player, amount);
-    }
 }
