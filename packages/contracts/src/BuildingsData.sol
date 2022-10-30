@@ -16,35 +16,35 @@ abstract contract BuildingsData {
             costMineral: 0,
             costGas: 0,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 30,
             constructionTime: 0
         });
         levelInfo[BuildingType.MINERAL_MINE][1] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 60,
+            costGas: 15,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 33,
             constructionTime: 0
         });
         levelInfo[BuildingType.MINERAL_MINE][2] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 90,
+            costGas: 22,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 72,
             constructionTime: 0
         });
         levelInfo[BuildingType.MINERAL_MINE][3] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 135,
+            costGas: 33,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 119,
             constructionTime: 0
         });
         levelInfo[BuildingType.MINERAL_MINE][4] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 202,
+            costGas: 50,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 175,
             constructionTime: 0
         });
 
@@ -58,31 +58,31 @@ abstract contract BuildingsData {
             constructionTime: 0
         });
         levelInfo[BuildingType.GAS_EXTRACTOR][1] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 28,
+            costGas: 24,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 22,
             constructionTime: 0
         });
         levelInfo[BuildingType.GAS_EXTRACTOR][2] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 76,
+            costGas: 38,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 48,
             constructionTime: 0
         });
         levelInfo[BuildingType.GAS_EXTRACTOR][3] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 122,
+            costGas: 61,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 79,
             constructionTime: 0
         });
         levelInfo[BuildingType.GAS_EXTRACTOR][4] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 196,
+            costGas: 98,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 117,
             constructionTime: 0
         });
 
@@ -96,31 +96,31 @@ abstract contract BuildingsData {
             constructionTime: 0
         });
         levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][1] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 225,
+            costGas: 75,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 11,
             constructionTime: 0
         });
         levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][2] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 337,
+            costGas: 112,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 24,
             constructionTime: 0
         });
         levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][3] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 506,
+            costGas: 169,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 39,
             constructionTime: 0
         });
         levelInfo[BuildingType.DEUTERIUM_SYNTHESIZER][4] = BuildingLevelInfo({
-            costMineral: 0,
-            costGas: 0,
+            costMineral: 759,
+            costGas: 253,
             costDeuterium: 0,
-            productionRate: 0,
+            productionRate: 59,
             constructionTime: 0
         });
     }

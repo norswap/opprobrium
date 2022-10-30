@@ -33,6 +33,11 @@ contract BuildingsTests is Test {
     }
 
     function testUpgrade() public init {
+        vm.prank(address(mineral));
+        mineral.mint(player, 1000);
+        vm.prank(address(gas));
+        gas.mint(player, 1000);
+
         assertEq(buildings.levels(player, MINE), 0);
         buildings.upgrade(player, MINE);
         assertEq(buildings.levels(player, MINE), 1);

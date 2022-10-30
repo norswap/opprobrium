@@ -46,7 +46,7 @@ contract Buildings is BuildingsData, Ownable {
     function upgrade(address player, BuildingType btype) public {
         uint32 level = levels[player][btype];
         require(level < MAX_LEVEL, "building already at max level");
-        BuildingLevelInfo memory info = levelInfo[btype][level];
+        BuildingLevelInfo memory info = levelInfo[btype][level + 1];
 
         // flush production at previous level's rate
         mineral.updateBalance(player);
@@ -54,9 +54,9 @@ contract Buildings is BuildingsData, Ownable {
         deuterium.updateBalance(player);
 
         // pay the costs
-        mineral.burn(info.costMineral);
-        gas.burn(info.costGas);
-        deuterium.burn(info.costDeuterium);
+        mineral.systemBurnFrom(player, info.costMineral);
+        gas.systemBurnFrom(player, info.costGas);
+        deuterium.systemBurnFrom(player, info.costDeuterium);
 
         levels[player][btype] = level + 1;
     }

@@ -23,12 +23,24 @@ abstract contract Resource is ERC20Burnable {
     mapping(address => uint256) private lastUpdate;
 
     // Update resource production based on building production since last update.
-    function updateBalance(address player) public {
+    function updateBalance(address player) external {
         uint256 last = lastUpdate[player];
         if (last == block.timestamp) return;
         uint256 rate = buildings.productionRate(player, buildingType);
         uint256 amount = (block.timestamp - last) * rate;
         last = block.timestamp;
+        _mint(player, amount);
+    }
+
+    // The Buildings contract doesn't need allowances to burn.
+    function systemBurnFrom(address player, uint256 amount) external {
+        require(msg.sender == address(buildings));
+        _burn(player, amount);
+    }
+
+    // Public mint function — only for testing.
+    function mint(address player, uint256 amount) external {
+        require(msg.sender == address(this));
         _mint(player, amount);
     }
 }
