@@ -21,6 +21,12 @@ contract BuildingsTests is Test {
         deuterium = new Deuterium(buildings);
         gas = new Gas(buildings);
         mineral = new Mineral(buildings);
+
+        // Necessary to avoid confusion between the multiple ERC-20 implems in Foundry traces
+        // Tracked at https://github.com/foundry-rs/foundry/issues/3582
+        vm.label(address(deuterium), "Deuterium");
+        vm.label(address(gas), "Gas");
+        vm.label(address(mineral), "Mineral");
     }
 
     modifier init() {
@@ -28,7 +34,8 @@ contract BuildingsTests is Test {
         _;
     }
 
-    function testFailUpgradeNonInit() public {
+    function testUpgradeRevertIfNonInit() public {
+        vm.expectRevert(bytes(""));
         buildings.upgrade(player, MINE);
     }
 

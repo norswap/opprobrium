@@ -48,6 +48,8 @@ contract Buildings is BuildingsData, Ownable {
         require(level < MAX_LEVEL, "building already at max level");
         BuildingLevelInfo memory info = levelInfo[btype][level + 1];
 
+        // next call will fail (with empty reason string) if !initialized
+
         // flush production at previous level's rate
         mineral.updateBalance(player);
         gas.updateBalance(player);
