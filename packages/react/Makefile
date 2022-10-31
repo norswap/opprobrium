@@ -13,3 +13,7 @@ build-prod:
 watch:
 	pnpx esbuild app.jsx --bundle --outdir=www --watch
 .PHONY: watch
+
+watch-prod:
+	pnpx esbuild app.jsx --bundle --minify --outdir=www --watch
+.PHONY: watch
