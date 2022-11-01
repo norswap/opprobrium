@@ -68,7 +68,7 @@ class Building extends React.Component {
         <p>Level: {this.state.level}<br/>
         Production: 60 units/seconds<br/>
         Next level: +20 units/seconds<br/>
-        Upgrade Cost: 30 🪨 30 💎 30 🧪<br/>
+        Upgrade Cost: 30 💠 30 ☣ ️30 🧪<br/>
         Upgrade Time: 60 minutes</p>
         <button type="button" className="btn btn-dark btn-sm"
                 onClick={this.upgradeBuilding}>
@@ -86,7 +86,7 @@ function AppBody() {
     </div>
     <h1 className="mx-5 my-3 display-1"><em>OPPROBRIUM</em> 💥✨</h1>
     <Building name="Mineral Mine" url="assets/mineral-mine.png" />
-    <Building name="Crystal Mine" url="assets/crystal-mine.png" />
+    <Building name="Gas Extractor" url="assets/gas-extractor.png" />
     <Building name="Deuterium Synthesizer" url="assets/deuterium-synthesizer.png" />
   </div>
 }
