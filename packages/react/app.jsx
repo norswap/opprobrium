@@ -49,11 +49,13 @@ const wagmiClient = createClient({
 
 // =============================================================================
 
+const buildings = require('../data/buildings/buildings.json')
+
 class Building extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {level: 1};
+    this.state = {level: 0};
   }
 
   upgradeBuilding = () => {
@@ -61,19 +63,29 @@ class Building extends React.Component {
   };
 
   render() {
+    const keyName = this.props.name.toLowerCase().replaceAll(' ', '_')
+    console.log(keyName)
+    const lvl = buildings[keyName][this.state.level]
+    const nextLvl = buildings[keyName][this.state.level + 1]
+
+    const upgradeInfo = !nextLvl ? <></>
+      : <>
+        <p>Next level: +{nextLvl.productionRate - lvl.productionRate} units/seconds<br/>
+        Upgrade Cost: {nextLvl.costMineral} 💠 {nextLvl.costGas} ☣ ️{nextLvl.costDeuterium} 🧪<br/>
+        Upgrade Time: {nextLvl.constructionTime}</p>
+        <button type="button" className="btn btn-dark btn-sm"
+                onClick={this.upgradeBuilding}>
+          Upgrade
+        </button>
+      </>
+
     return <div className="row building border my-3">
       <img className="col-md-3 px-0" src={this.props.url} />
       <div className="col-md-9 px-3 py-3">
         <h4>{this.props.name}</h4>
         <p>Level: {this.state.level}<br/>
-        Production: 60 units/seconds<br/>
-        Next level: +20 units/seconds<br/>
-        Upgrade Cost: 30 💠 30 ☣ ️30 🧪<br/>
-        Upgrade Time: 60 minutes</p>
-        <button type="button" className="btn btn-dark btn-sm"
-                onClick={this.upgradeBuilding}>
-          Upgrade
-        </button>
+        Production: {lvl.productionRate} units/seconds</p>
+        {upgradeInfo}
       </div>
     </div>
   }
