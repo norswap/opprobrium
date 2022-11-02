@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState} from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './www/style.css'
@@ -51,44 +51,37 @@ const wagmiClient = createClient({
 
 const buildings = require('../data/buildings/buildings.json')
 
-class Building extends React.Component {
+function Building(props) {
+  const [level, setLevel] = useState(0);
 
-  constructor(props) {
-    super(props);
-    this.state = {level: 0};
+  const upgradeBuilding = () => {
+    setLevel(level + 1)
   }
 
-  upgradeBuilding = () => {
-    this.setState({level: this.state.level + 1});
-  };
+  const keyName = props.name.toLowerCase().replaceAll(' ', '_')
+  const lvl = buildings[keyName][level]
+  const nextLvl = buildings[keyName][level + 1]
 
-  render() {
-    const keyName = this.props.name.toLowerCase().replaceAll(' ', '_')
-    console.log(keyName)
-    const lvl = buildings[keyName][this.state.level]
-    const nextLvl = buildings[keyName][this.state.level + 1]
-
-    const upgradeInfo = !nextLvl ? <></>
-      : <>
-        <p>Next level: +{nextLvl.productionRate - lvl.productionRate} units/seconds<br/>
+  const upgradeInfo = !nextLvl ? <></>
+    : <>
+      <p>Next level: +{nextLvl.productionRate - lvl.productionRate} units/seconds<br/>
         Upgrade Cost: {nextLvl.costMineral} 💠 {nextLvl.costGas} ☣ ️{nextLvl.costDeuterium} 🧪<br/>
         Upgrade Time: {nextLvl.constructionTime}</p>
-        <button type="button" className="btn btn-dark btn-sm"
-                onClick={this.upgradeBuilding}>
-          Upgrade
-        </button>
-      </>
+      <button type="button" className="btn btn-dark btn-sm"
+              onClick={upgradeBuilding}>
+        Upgrade
+      </button>
+    </>
 
-    return <div className="row building border my-3">
-      <img className="col-md-3 px-0" src={this.props.url} />
-      <div className="col-md-9 px-3 py-3">
-        <h4>{this.props.name}</h4>
-        <p>Level: {this.state.level}<br/>
+  return <div className="row building border my-3">
+    <img className="col-md-3 px-0" src={props.url}  alt="building illustration"/>
+    <div className="col-md-9 px-3 py-3">
+      <h4>{props.name}</h4>
+      <p>Level: {level}<br/>
         Production: {lvl.productionRate} units/seconds</p>
-        {upgradeInfo}
-      </div>
+      {upgradeInfo}
     </div>
-  }
+  </div>
 }
 
 function AppBody() {
