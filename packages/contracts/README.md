@@ -12,8 +12,13 @@ Tooling required:
 
 - `cd ../.. && make setup` - initialize libraries and npm packages
 - `make build` - build your project
-- `make xclean` - remove compiled files
+- `make test` - run tests on temp local devnet
+- `make watch` - watch files and re-run tests on temp local devnet
+- `make test-gas` - run tests and show gas report on temp local devnet
+- `make test-fork` - run tests and show gas report using `$ETH_NODE` as RPC endpoint
+- `make clean` - remove compiled files
+- `make lint-check` - check that files are properly linted
 - `make lint` - lint files
-- `make test` - run tests
-- `make test-gasreport` - run tests and show gas report
-- `make watch` - watch files and re-run tests
+- `make anvil` - run local Anvil devnet on port 1337
+- `make deploy-local` - deploy the contracts on the Anvil devnet, using `$PRIVATE_KEY0` as deployer private key
+  - the contract addresses are output to `out/deployment.json`
