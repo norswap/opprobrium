@@ -1,19 +1,15 @@
+# Define NODE_ENV=prod to switch to prod mode.
+
+export NODE_ENV ?= dev
+
 serve:
 	cd www && pnpx reload -b
 .PHONY: serve
 
 build:
-	pnpx esbuild app.jsx --bundle --outdir=www
+	node esbuild.js
 .PHONY: build
 
-build-prod:
-	pnpx esbuild app.jsx --bundle --minify --outdir=www
-.PHONY: build-prod
-
 watch:
-	pnpx esbuild app.jsx --bundle --outdir=www --watch
-.PHONY: watch
-
-watch-prod:
-	pnpx esbuild app.jsx --bundle --minify --outdir=www --watch
+	node esbuild.js --watch
 .PHONY: watch

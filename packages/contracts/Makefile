@@ -43,6 +43,7 @@ lint:
 	pnpm exec solhint --config ./.solhint.json "src/**/*.sol" --fix
 .PHONY: lint
 
+# The 1337 chain id matches chain.localhost in RainbowKit.
 anvil:
 	anvil --chain-id 1337
 .PHONY: anvil

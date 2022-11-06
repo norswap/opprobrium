@@ -11,6 +11,7 @@
     "wagmi": "^0.7.5"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "esbuild": "^0.15.12",
     "reload": "^3.2.0"
   }

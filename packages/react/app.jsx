@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client'
 
 import './www/style.css'
 
-const ALCHEMY_ID='_Kk7f1qWnBq1aRfgSMjfaDLTBl9ubL0a'
-
 // =============================================================================
 // Configure Rainbow
 
@@ -24,16 +22,11 @@ import {
   WagmiConfig,
 } from 'wagmi'
 
-// import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
 
 const { chains, provider } = configureChains(
-    [chain.goerli],
-//  [chain.optimismGoerli],
-  [
-//    alchemyProvider({ apiKey: ALCHEMY_ID }),
-    publicProvider()
-  ]
+  [chain.localhost],
+  [publicProvider()]
 )
 
 const { connectors } = getDefaultWallets({

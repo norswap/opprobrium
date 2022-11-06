@@ -29,6 +29,7 @@ importers:
   packages/react:
     specifiers:
       '@rainbow-me/rainbowkit': ^0.7.3
+      dotenv: ^16.0.3
       esbuild: ^0.15.12
       ethers: ^5.7.2
       react: ^18.2.0
@@ -42,6 +43,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       wagmi: 0.7.5_n2cgurg25g7cgftjzlbstkeb2y
     devDependencies:
+      dotenv: 16.0.3
       esbuild: 0.15.12
       reload: 3.2.0
 
@@ -1611,6 +1613,11 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: true
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
     dev: true
 
   /ee-first/1.1.1:
