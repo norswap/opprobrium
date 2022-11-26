@@ -1,9 +1,16 @@
-# include .env file and export its env vars
-# (-include to ignore error if it does not exist)
--include .env
+setup:
+	make init-modules
+	make install-deps
+.PHONY: setup
 
-# Update dependencies
-setup			:; make init-modules; make install-deps
-init-modules	:; git submodule update --init --recursive
-install-deps	:; pnpm install --frozen-lockfile
-update-deps		:; pnpm install
+init-modules:
+	git submodule update --init --recursive
+.PHONY: init-modules
+
+install-deps:
+	pnpm install --frozen-lockfile
+.PHONY: install-deps
+
+update-deps:
+	pnpm install
+.PHONY: update-deps

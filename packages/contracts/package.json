@@ -12,17 +12,6 @@
     "solhint": "^3.3.7",
     "solhint-plugin-prettier": "^0.0.5"
   },
-  "scripts": {
-    "lint": "pnpm run prettier && pnpm run solhint",
-    "lint:check": "solhint --config ./.solhint.json \"src/**/*.sol\"",
-    "solhint": "pnpm run lint:check --fix",
-    "prettier:check": "prettier --check \"src/**/*.sol\"",
-    "prettier": "pnpm run prettier:check --write"
-  },
-  "comment___": [
-    "With the prettier plugin, solhint will re-run the prettier check, but can't actually change the files to match.",
-    "Solhint does however report more details about prettier violations than prettier itself."
-  ],
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.3"
   }
